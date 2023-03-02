@@ -91,15 +91,15 @@ while True:
     for item in crafting_system:
         can_craft = True
             for resource, amount in crafting_system[item].items():
-        if resource == 'food' and food_available < amount * population:
-            can_craft = False
-            break
-        elif resource == 'wood' and wood_available < amount * population:
-            can_craft = False
-            break
-        elif resource == 'stone' and stone_available < amount * population:
-            can_craft = False
-            break
+                if resource == 'food' and food_available < amount * population:
+                    can_craft = False
+                    break
+                elif resource == 'wood' and wood_available < amount * population:
+                    can_craft = False
+                    break
+                elif resource == 'stone' and stone_available < amount * population:
+                    can_craft = False
+                    break
     if can_craft:
         print(f"Crafting {item}...")
         food_available -= crafting_system[item]['food'] * population
