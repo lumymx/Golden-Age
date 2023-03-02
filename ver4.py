@@ -106,11 +106,11 @@ while True:
         wood_available -= crafting_system[item]['wood'] * population
         stone_available -= crafting_system[item]['stone'] * population
 
-# Check if Golden Age has been reached
-if happiness_level >= 0.9 and education_level >= 0.8 and tech_level >= 50:
-    print("Golden Age reached!")
-    break
+    # Check if Golden Age has been reached
+    if happiness_level >= 0.9 and education_level >= 0.8 and tech_level >= 50:
+        print("Golden Age reached!")
+        break
 
-# Increment years passed and print current state of simulation
-years_passed += 1
-print(f"Year {years_passed}: Population={population}, Food={food_available}, Wood={wood_available}, Stone={stone_available}, Happiness={happiness_level}, Education={education_level}, Tech={tech_level}")
+    # Increment years passed and print current state of simulation
+    years_passed += 1
+    print(f"Year {years_passed}: Population={population}, Food={food_available}, Wood={wood_available}, Stone={stone_available}, Happiness={happiness_level}, Education={education_level}, Tech={tech_level}")
